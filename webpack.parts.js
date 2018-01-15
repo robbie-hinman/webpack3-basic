@@ -10,3 +10,23 @@ exports.devServer = ({ host, port } = {}) => ({
   },
 });
 
+exports.loadCSS = ({ include, exclude } = {}) => ({
+  module: {
+    rules: [
+      {
+        test: /\.s?css$/,
+        include,
+        exclude,
+
+        use: ['style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              sourceMap: true,
+            },
+          }, 'sass-loader'],
+      },
+    ],
+  },
+});

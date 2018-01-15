@@ -1,4 +1,7 @@
 import component from './component';
-// import './style.css';
+import myButton from './Button';
+import './style.scss';
 
 document.body.appendChild(component());
+document.body.appendChild(myButton());
+
