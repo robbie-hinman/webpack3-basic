@@ -15,7 +15,6 @@ const commonConfig = merge([
     },
     output: {
       path: PATHS.build,
-      publicPath: 'http://localhost:8080/',
       filename: '[name].js',
     },
     plugins: [
@@ -41,6 +40,9 @@ const productionConfig = merge([
 ]);
 
 const developmentConfig = merge([
+  {
+    output: { publicPath: 'http://localhost:8080/' },
+  },
   parts.devServer({
     // Customize host/port here if needed
     host: process.env.HOST,
