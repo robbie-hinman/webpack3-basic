@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
-const glob = require('glob');
 const parts = require('./webpack.parts');
 
 const PATHS = {
@@ -16,7 +15,7 @@ const commonConfig = merge([
     },
     output: {
       path: PATHS.build,
-      // publicPath: 'http://localhost:8080/',
+      publicPath: 'http://localhost:8080/',
       filename: '[name].js',
     },
     plugins: [
@@ -39,9 +38,6 @@ const productionConfig = merge([
       name: '[name].[ext]',
     },
   }),
-  // parts.purifyCSS({
-  //   paths: glob.sync(`${PATHS.app}/**/*.js`, { nodir: true }),
-  // }),
 ]);
 
 const developmentConfig = merge([
