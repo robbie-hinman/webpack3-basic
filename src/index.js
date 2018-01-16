@@ -1,3 +1,5 @@
+import 'purecss';
+
 import component from './component';
 import myButton from './Button';
 import './style.scss';

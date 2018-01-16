@@ -35,6 +35,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7",
+    "purecss": "^1.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }
