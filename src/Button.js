@@ -7,5 +7,6 @@ export default (text = 'Button') => {
   const element = document.createElement('a');
   element.className = 'btn btn-primary btn-lg';
   element.innerHTML = text;
+  element.href = '#';
   return element;
 };
